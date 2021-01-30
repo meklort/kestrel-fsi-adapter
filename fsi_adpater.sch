@@ -1,0 +1,436 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "FSI Adapter"
+Date "2021-01-30"
+Rev "1.0"
+Comp "Evan Lojewski"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L parts:QTH-030-01-X-D-A J1
+U 1 1 604FB505
+P 7700 3400
+F 0 "J1" H 7700 5267 50  0000 C CNN
+F 1 "QTH-030-01-F-D-A-K" H 7700 5176 50  0000 C CNN
+F 2 "SAMTEC-QTH-030-01-X-D-A" H 7700 3400 50  0001 L BNN
+F 3 "" H 7700 3400 50  0001 L BNN
+F 4 "L" H 7700 3400 50  0001 L BNN "PARTREV"
+F 5 "Manufacturer Recommendations" H 7700 3400 50  0001 L BNN "STANDARD"
+F 6 "Samtec" H 7700 3400 50  0001 L BNN "MANUFACTURER"
+F 7 "4.347mm" H 7700 3400 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+	1    7700 3400
+	1    0    0    -1  
+$EndComp
+Text Label 8300 1800 0    50   ~ 0
+DBG_CON_FSI_CLK
+Text Label 6650 1900 0    50   ~ 0
+DBG_MUX_SEL
+$Comp
+L power:GND #PWR0101
+U 1 1 60502488
+P 8300 5000
+F 0 "#PWR0101" H 8300 4750 50  0001 C CNN
+F 1 "GND" H 8305 4827 50  0000 C CNN
+F 2 "" H 8300 5000 50  0001 C CNN
+F 3 "" H 8300 5000 50  0001 C CNN
+	1    8300 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4900 8300 4900
+Wire Wire Line
+	8300 4900 8300 5000
+Wire Wire Line
+	8200 1900 8300 1900
+Wire Wire Line
+	8300 1900 8300 4900
+Connection ~ 8300 4900
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 60505CBC
+P 6550 1900
+F 0 "#PWR0102" H 6550 1750 50  0001 C CNN
+F 1 "+3.3V" H 6565 2073 50  0000 C CNN
+F 2 "" H 6550 1900 50  0001 C CNN
+F 3 "" H 6550 1900 50  0001 C CNN
+	1    6550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 605085CC
+P 3450 1750
+F 0 "#PWR0103" H 3450 1600 50  0001 C CNN
+F 1 "+3.3V" H 3465 1923 50  0000 C CNN
+F 2 "" H 3450 1750 50  0001 C CNN
+F 3 "" H 3450 1750 50  0001 C CNN
+	1    3450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1850 3550 1850
+Wire Wire Line
+	7200 1800 7100 1800
+Wire Wire Line
+	5100 2050 4850 2050
+$Comp
+L Regulator_Linear:TLV73311PDBV U1
+U 1 1 6051495F
+P 1700 1900
+F 0 "U1" H 1700 2242 50  0000 C CNN
+F 1 "TLV73311PDBV" H 1700 2151 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1700 2225 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 1700 1900 50  0001 C CNN
+	1    1700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 60524E5C
+P 1050 1650
+F 0 "#PWR0104" H 1050 1500 50  0001 C CNN
+F 1 "+3.3V" H 1065 1823 50  0000 C CNN
+F 2 "" H 1050 1650 50  0001 C CNN
+F 3 "" H 1050 1650 50  0001 C CNN
+	1    1050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60525B2C
+P 1700 2400
+F 0 "#PWR0105" H 1700 2150 50  0001 C CNN
+F 1 "GND" H 1705 2227 50  0000 C CNN
+F 2 "" H 1700 2400 50  0001 C CNN
+F 3 "" H 1700 2400 50  0001 C CNN
+	1    1700 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2300 1700 2200
+$Comp
+L power:+1V1 #PWR0106
+U 1 1 605262AD
+P 2100 1600
+F 0 "#PWR0106" H 2100 1450 50  0001 C CNN
+F 1 "+1V1" H 2115 1773 50  0000 C CNN
+F 2 "" H 2100 1600 50  0001 C CNN
+F 3 "" H 2100 1600 50  0001 C CNN
+	1    2100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1800 2100 1800
+Wire Wire Line
+	2100 1800 2100 1600
+$Comp
+L power:+1V1 #PWR0107
+U 1 1 60527313
+P 4950 1700
+F 0 "#PWR0107" H 4950 1550 50  0001 C CNN
+F 1 "+1V1" H 4965 1873 50  0000 C CNN
+F 2 "" H 4950 1700 50  0001 C CNN
+F 3 "" H 4950 1700 50  0001 C CNN
+	1    4950 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1850 4950 1850
+Text Label 3150 2850 1    50   ~ 0
+FSI_DAT_EN
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 605310CE
+P 2750 3100
+F 0 "J2" H 2668 3517 50  0000 C CNN
+F 1 "Conn_01x05" H 2668 3426 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 2750 3100 50  0001 C CNN
+F 3 "~" H 2750 3100 50  0001 C CNN
+	1    2750 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L parts:74AVC4TD245PW,118 IC1
+U 1 1 604FA2A3
+P 3550 1850
+F 0 "IC1" H 4200 2115 50  0000 C CNN
+F 1 "74AVC4TD245PW,118" H 4200 2024 50  0000 C CNN
+F 2 "SOP65P640X110-16N" H 4700 1950 50  0001 L CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AVC4TD245PW.pdf" H 4700 1850 50  0001 L CNN
+F 4 "74AVC4TD245PW - 4-bit dual supply translating transceiver with configurable voltage translation;3-state@en-us" H 4700 1750 50  0001 L CNN "Description"
+F 5 "1.1" H 4700 1650 50  0001 L CNN "Height"
+F 6 "Nexperia" H 4700 1550 50  0001 L CNN "Manufacturer_Name"
+F 7 "74AVC4TD245PW,118" H 4700 1450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "771-74AVC4TD245PW118" H 4700 1350 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Nexperia/74AVC4TD245PW118?qs=vbj%2FKoHZRAgBf2UMQ6EFpA%3D%3D" H 4700 1250 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74AVC4TD245PW,118" H 4700 1150 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74avc4td245pw118/nexperia" H 4700 1050 50  0001 L CNN "Arrow Price/Stock"
+	1    3550 1850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3550 2150
+$Comp
+L power:GND #PWR0108
+U 1 1 6056DFC5
+P 4150 2800
+F 0 "#PWR0108" H 4150 2550 50  0001 C CNN
+F 1 "GND" H 4155 2627 50  0000 C CNN
+F 2 "" H 4150 2800 50  0001 C CNN
+F 3 "" H 4150 2800 50  0001 C CNN
+	1    4150 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2550 4850 2800
+Connection ~ 4150 2800
+Wire Wire Line
+	4150 2800 4850 2800
+Connection ~ 4850 2800
+Wire Wire Line
+	4850 2800 4950 2800
+Wire Wire Line
+	4850 2150 4950 2150
+Wire Wire Line
+	4850 1950 4950 1950
+Wire Wire Line
+	4950 1950 4950 2150
+Connection ~ 4950 2150
+$Comp
+L power:GND #PWR0109
+U 1 1 60582199
+P 3000 3400
+F 0 "#PWR0109" H 3000 3150 50  0001 C CNN
+F 1 "GND" H 3005 3227 50  0000 C CNN
+F 2 "" H 3000 3400 50  0001 C CNN
+F 3 "" H 3000 3400 50  0001 C CNN
+	1    3000 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3000 2950 3000
+Wire Wire Line
+	3000 3000 3000 3200
+Wire Wire Line
+	3000 3200 2950 3200
+Connection ~ 3000 3200
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 6059437D
+P 6650 2250
+F 0 "J3" H 6568 2567 50  0000 C CNN
+F 1 "Conn_01x03" H 6568 2476 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6650 2250 50  0001 C CNN
+F 3 "~" H 6650 2250 50  0001 C CNN
+	1    6650 2250
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 6059A0EF
+P 6900 2250
+F 0 "#PWR0110" H 6900 2000 50  0001 C CNN
+F 1 "GND" H 6905 2077 50  0000 C CNN
+F 2 "" H 6900 2250 50  0001 C CNN
+F 3 "" H 6900 2250 50  0001 C CNN
+	1    6900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1950 6750 2050
+$Comp
+L Device:C C1
+U 1 1 605AC7E6
+P 2900 2000
+F 0 "C1" H 3015 2046 50  0000 L CNN
+F 1 "100nF" H 3015 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2938 1850 50  0001 C CNN
+F 3 "~" H 2900 2000 50  0001 C CNN
+	1    2900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 605AD2EE
+P 5300 2150
+F 0 "C2" H 5415 2196 50  0000 L CNN
+F 1 "100nF" H 5415 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5338 2000 50  0001 C CNN
+F 3 "~" H 5300 2150 50  0001 C CNN
+	1    5300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 605B4368
+P 2900 2250
+F 0 "#PWR0111" H 2900 2000 50  0001 C CNN
+F 1 "GND" H 2905 2077 50  0000 C CNN
+F 2 "" H 2900 2250 50  0001 C CNN
+F 3 "" H 2900 2250 50  0001 C CNN
+	1    2900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2250 2900 2150
+$Comp
+L Device:C C3
+U 1 1 605C6324
+P 1050 2100
+F 0 "C3" H 1165 2146 50  0000 L CNN
+F 1 "100nF" H 1165 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1088 1950 50  0001 C CNN
+F 3 "~" H 1050 2100 50  0001 C CNN
+	1    1050 2100
+	1    0    0    -1  
+$EndComp
+Text Notes 3950 3700 0    50   ~ 0
+DIRn L         An <= Bn ,  Bn is Input\nDIRn H(VccA)  An is input, Bn <= An  \n\nChannel 1: FSI_DAT\nChannel 2: \nChannel 3: FSI_CLK\nChannel 4:
+Wire Wire Line
+	1400 1900 1300 1900
+Wire Wire Line
+	1300 1900 1300 1800
+Wire Wire Line
+	1400 1800 1300 1800
+Connection ~ 1300 1800
+Wire Wire Line
+	4950 1700 4950 1850
+Wire Wire Line
+	5300 2800 4950 2800
+Wire Wire Line
+	5300 2300 5300 2800
+Connection ~ 4950 2800
+Wire Wire Line
+	4950 1850 5300 1850
+Wire Wire Line
+	5300 1850 5300 2000
+Connection ~ 4950 1850
+Wire Wire Line
+	8200 1800 8300 1800
+Wire Wire Line
+	1050 1800 1300 1800
+Wire Wire Line
+	1050 1650 1050 1800
+Connection ~ 1050 1800
+Wire Wire Line
+	1050 1800 1050 1950
+Wire Wire Line
+	1050 2250 1050 2300
+Wire Wire Line
+	1050 2300 1700 2300
+Wire Wire Line
+	1700 2300 1700 2400
+Connection ~ 1700 2300
+Wire Wire Line
+	3000 3200 3000 3400
+Text Label 3350 2850 1    50   ~ 0
+FSI_CLK
+Text Label 3250 2850 1    50   ~ 0
+FSI_DAT
+Wire Wire Line
+	3450 1750 3450 1850
+Connection ~ 3450 1850
+Wire Wire Line
+	2900 1850 3450 1850
+Wire Wire Line
+	2950 3300 3350 3300
+Wire Wire Line
+	2950 3100 3250 3100
+Wire Wire Line
+	3250 3100 3250 2050
+Wire Wire Line
+	3250 2050 3550 2050
+Wire Wire Line
+	3150 1950 3150 2900
+Wire Wire Line
+	3150 1950 3550 1950
+Wire Wire Line
+	2950 2900 3150 2900
+Text Label 5200 1650 0    50   ~ 0
+DBG_CON_FSI_DAT
+Wire Wire Line
+	7100 1800 7100 1650
+Wire Wire Line
+	7100 1650 5100 1650
+Wire Wire Line
+	5100 1650 5100 2050
+Wire Wire Line
+	7200 1900 6650 1900
+Wire Wire Line
+	6650 2050 6650 1900
+$Comp
+L power:+3.3V #PWR0112
+U 1 1 607054C3
+P 6900 4450
+F 0 "#PWR0112" H 6900 4300 50  0001 C CNN
+F 1 "+3.3V" H 6915 4623 50  0000 C CNN
+F 2 "" H 6900 4450 50  0001 C CNN
+F 3 "" H 6900 4450 50  0001 C CNN
+	1    6900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4600 6900 4450
+Wire Wire Line
+	6900 4600 7200 4600
+Wire Wire Line
+	8300 950  8300 1800
+Wire Wire Line
+	5150 950  8300 950 
+Wire Wire Line
+	6550 1900 6550 2050
+Wire Wire Line
+	6900 2250 6900 1950
+Wire Wire Line
+	6750 1950 6900 1950
+Wire Wire Line
+	4950 2150 4950 2350
+Wire Wire Line
+	4850 2250 5150 2250
+Wire Wire Line
+	5150 2250 5150 950 
+Wire Wire Line
+	4850 2350 4950 2350
+Connection ~ 4950 2350
+NoConn ~ 3550 2350
+Wire Wire Line
+	3350 2250 3350 3300
+Wire Wire Line
+	3350 2250 3550 2250
+Wire Wire Line
+	3550 2450 3500 2450
+Wire Wire Line
+	3500 2450 3500 2550
+Wire Wire Line
+	3500 2800 4150 2800
+Wire Wire Line
+	3550 2550 3500 2550
+Connection ~ 3500 2550
+Wire Wire Line
+	3500 2550 3500 2800
+Wire Wire Line
+	4950 2350 4950 2800
+$Comp
+L power:+3.3V #PWR0113
+U 1 1 6073FE07
+P 5050 2450
+F 0 "#PWR0113" H 5050 2300 50  0001 C CNN
+F 1 "+3.3V" V 5065 2578 50  0000 L CNN
+F 2 "" H 5050 2450 50  0001 C CNN
+F 3 "" H 5050 2450 50  0001 C CNN
+	1    5050 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 2450 4850 2450
+Text Notes 5850 2600 0    50   ~ 0
+MUX_SEL low enables\nFSI from this connector
+Text Notes 5850 2850 0    50   ~ 0
+MUX_SEL is directly connected\n to the AST2500 on GPIOA6
+$EndSCHEMATC

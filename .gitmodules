@@ -1,0 +1,3 @@
+[submodule "parts"]
+	path = kicad-parts
+	url = ../kicad-parts
