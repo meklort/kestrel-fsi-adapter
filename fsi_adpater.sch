@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "FSI Adapter"
 Date "2021-01-30"
-Rev "1.0"
+Rev "1.1"
 Comp "Evan Lojewski"
 Comment1 ""
 Comment2 ""
@@ -150,8 +150,8 @@ L Connector_Generic:Conn_01x05 J2
 U 1 1 605310CE
 P 2750 3100
 F 0 "J2" H 2668 3517 50  0000 C CNN
-F 1 "Conn_01x05" H 2668 3426 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 2750 3100 50  0001 C CNN
+F 1 "1719710003" H 2668 3426 50  0000 C CNN
+F 2 "parts:Molex_SL_171971-0005_1x05_P2.54mm_Vertical" H 2750 3100 50  0001 C CNN
 F 3 "~" H 2750 3100 50  0001 C CNN
 	1    2750 3100
 	-1   0    0    -1  
